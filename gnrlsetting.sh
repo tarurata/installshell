@@ -4,7 +4,7 @@
 
 
 ## Update all (installed?) yum repositories.
-yum update
+# yum update -y
 
 ## Set SElinux disabled permanently for development. 
 sed -i "s/\(^SELINUX=\).*/\1disabled/" /etc/selinux/config
@@ -25,3 +25,5 @@ yum install wireshark -y
 
 ## Git installation
 yum install git -y
+git config --global user.email "test@test.com"
+git config --global user.name "tarurata"
