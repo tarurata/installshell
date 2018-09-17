@@ -32,13 +32,13 @@ then
 # Adapt the change promptly with source command.
 	echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
 	echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-	source ~/.bash_profile
 
 else
 	echo 'PATH is already existed and just omitted making PATH'
 
 fi
 
+source ~/.bash_profile
 rbenv --version
 
 ### Install ruby

@@ -2,11 +2,11 @@
 
 # Settings for development.
 
-if [[ "${UID}" -ne 0 ]]
-then
-	echo 'Please execute as root user.'
-	exit 1
-fi
+# if [[ "${UID}" -ne 0 ]]
+# then
+# 	echo 'Please execute as root user.'
+# 	exit 1
+# fi
 
 ## Update all (installed?) yum repositories.
 # yum update -y
