@@ -12,7 +12,14 @@ fi
 # yum update -y
 
 ## Set SElinux disabled permanently for development. 
-sed -i "s/\(^SELINUX=\).*/\1disabled/" /etc/selinux/config
+read -p 'Do you want to SElinux to be permissive permanently?(y/n)' YESNO
+if [[ "${YESNO}" = 'y' ]]
+then
+	setenforce 0
+	sed -i "s/\(^SELINUX=\).*/\1disabled/" /etc/selinux/config
+else
+	echo 'Did not do anything about SElinux'
+fi
 
 ## Vim installation( and .vimrc configuration.)
 yum install -y vim
