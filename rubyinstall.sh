@@ -47,9 +47,13 @@ rbenv --version
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 # Install ruby 
-rbenv install 2.4.2
+# Sometimes really slow to download from normal settings. 
+# If so use another mirror.(remove # sign) Even do so, it takes more than 10 minutes...?
+# https://github.com/Microsoft/WSL/issues/144
+# RUBY_BUILD_SKIP_MIRROR=1
+rbenv install --verbose 2.5.1
 # Decide which version to use for global(whole this centos)
-rbenv global 2.4.2
+rbenv global 2.5.1
 # Adapt the version
 rbenv rehash
 ruby -v

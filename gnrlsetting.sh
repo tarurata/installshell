@@ -22,7 +22,7 @@ else
 fi
 
 ## Vim installation( and .vimrc configuration.)
-yum install -y vim
+sudo yum install -y vim
 
 if [[ ! -e ~/.vimrc ]]
 then
@@ -40,11 +40,12 @@ else
 fi 
 
 ## Wireshark installation
-yum install wireshark -y
+sudo yum install wireshark -y
 
 ## Git installation
-yum install git -y
+sudo yum install git -y
 read -p 'Set git email(test@test.com)and username(tarurata) (y/n)?' SET_GITSTATUS
+
 if [[ "${SET_GITSTATUS}" = 'y' ]]
 then
 	git config --global user.email "test@test.com"

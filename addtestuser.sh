@@ -5,6 +5,6 @@ passwd testuser
 
 # Allows people in group wheel to run all commands
 # edit /etc/sudoers
-# %wheel ALL(=ALL) NOPASSWD: ALL              comment out off. conditional. later...
+sed -i "s/# %wheel	ALL=(ALL)	ALL/%wheel	ALL=(ALL)	ALL/g" /etc/sudoers
 
 usermod -aG wheel testuser
