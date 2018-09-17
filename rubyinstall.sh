@@ -11,7 +11,7 @@
 # fi
 
 ### Install packages which are neccessary for ruby instllation.
-sudo yum install -y git gcc openssl-devel readline-devel zlib-devel sqlite-devel gcc-c++ libicu-devel cmake vim
+sudo yum install -y git gcc openssl-devel readline-devel zlib-devel sqlite-devel gcc-c++ libicu-devel cmake vim bzip2
 
 ### Get rbenv plugin from github.
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
