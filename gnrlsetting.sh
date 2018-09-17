@@ -44,7 +44,8 @@ yum install wireshark -y
 
 ## Git installation
 yum install git -y
-if [[ ${?} -eq 0 ]]
+read -p 'Set git email(test@test.com)and username(tarurata) (y/n)?' SET_GITSTATUS
+if [[ "${SET_GITSTATUS}" = 'y' ]]
 then
 	git config --global user.email "test@test.com"
 	git config --global user.name "tarurata"
