@@ -2,6 +2,11 @@
 
 # Settings for development.
 
+if [[ "${UID}" -ne 0 ]]
+then
+	echo 'Please execute as root user.'
+	exit 1
+fi
 
 ## Update all (installed?) yum repositories.
 # yum update -y
@@ -12,18 +17,28 @@ sed -i "s/\(^SELINUX=\).*/\1disabled/" /etc/selinux/config
 ## Vim installation( and .vimrc configuration.)
 yum install -y vim
 
-touch ~/.vimrc
-echo "set number" >> ~/.vimrc
-echo "color slate" >> ~/.vimrc
-echo "set shiftwidth=4" >> ~/.vimrc
-echo "set tabstop=4" >> ~/.vimrc
-echo "inoremap <silent> jk <ESC>" >> ~/.vimrc
-echo "inoremap <silent> kj <ESC>" >> ~/.vimrc
+if [[ ! -e ~/.vimrc ]]
+then
+	touch ~/.vimrc
+	echo "set number" >> ~/.vimrc
+	echo "color slate" >> ~/.vimrc
+	echo "set shiftwidth=4" >> ~/.vimrc
+	echo "set tabstop=4" >> ~/.vimrc
+	echo "inoremap <silent> jk <ESC>" >> ~/.vimrc
+	echo "inoremap <silent> kj <ESC>" >> ~/.vimrc
+	echo "set smartindent" >> ~/.vimrc
+	echo "Vimrc file has been created at ${HOME} directory"
+else
+	echo '.vimrc file is already existed. Nothing to do.'
+fi 
 
 ## Wireshark installation
 yum install wireshark -y
 
 ## Git installation
 yum install git -y
-git config --global user.email "test@test.com"
-git config --global user.name "tarurata"
+if [[ ${?} -eq 0 ]]
+then
+	git config --global user.email "test@test.com"
+	git config --global user.name "tarurata"
+fi
