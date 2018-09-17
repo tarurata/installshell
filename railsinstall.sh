@@ -12,6 +12,7 @@ sed -i 's/# gem "rails"/gem "rails", "~> 5.1.0"/g' "${INSTALL_DIR}Gemfile"
 
 # Install gem 
 # vender -> usually put 3rd party library.
+# vendor/bundlerは絶対パス必要かも・・要確認
 bundle install --path vendor/bundler
 
 bundle exec rails new "${INSTALL_DIR}"
