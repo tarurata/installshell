@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # make install directory
-INSTALL_DIR='~/app/ror/sample1/'
+INSTALL_DIR='${HOME}/app/ror/sample1/'
 mkdir -p "${INSTALL_DIR}"
+cd "${INSTALL_DIR}"
 
 # Initialize bundle 
 bundle init
