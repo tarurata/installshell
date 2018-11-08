@@ -50,3 +50,5 @@ then
 	git config --global user.email "test@test.com"
 	git config --global user.name "tarurata"
 fi
+
+. viminstall.sh
