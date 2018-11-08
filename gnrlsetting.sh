@@ -11,6 +11,9 @@
 ## Update all (installed?) yum repositories.
 # yum update -y
 
+## General packages installation
+sudo yum install wireshark git vim -y
+
 ## Set SElinux disabled permanently for development. 
 read -p 'Do you want to SElinux to be permissive permanently?(y/n)' YESNO
 if [[ "${YESNO}" = 'y' ]]
@@ -21,8 +24,7 @@ else
 	echo 'Did not do anything about SElinux'
 fi
 
-## Vim installation( and .vimrc configuration.)
-sudo yum install -y vim
+## .vimrc configuration.
 
 if [[ ! -e ~/.vimrc ]]
 then
@@ -39,11 +41,8 @@ else
 	echo '.vimrc file is already existed. Nothing to do.'
 fi 
 
-## Wireshark installation
-sudo yum install wireshark -y
 
-## Git installation
-sudo yum install git -y
+## Git Setting
 read -p 'Set git email(test@test.com)and username(tarurata) (y/n)?' SET_GITSTATUS
 
 if [[ "${SET_GITSTATUS}" = 'y' ]]
