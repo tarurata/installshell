@@ -25,6 +25,7 @@ else
 fi
 
 ## .vimrc configuration.
+. viminstall.sh
 
 if [[ ! -e ~/.vimrc ]]
 then
@@ -51,4 +52,3 @@ then
 	git config --global user.name "tarurata"
 fi
 
-. viminstall.sh
