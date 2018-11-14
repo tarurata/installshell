@@ -18,8 +18,8 @@ sudo yum install wireshark git vim -y
 read -p 'Do you want to SElinux to be permissive permanently?(y/n)' YESNO
 if [[ "${YESNO}" = 'y' ]]
 then
-	setenforce 0
-	sed -i "s/\(^SELINUX=\).*/\1disabled/" /etc/selinux/config
+    sudo setenforce 0
+	sudo sed -i "s/\(^SELINUX=\).*/\1disabled/" /etc/selinux/config
 else
 	echo 'Did not do anything about SElinux'
 fi
