@@ -12,7 +12,7 @@
 # yum update -y
 
 ## General packages installation
-sudo yum install wireshark git vim -y
+sudo yum install wireshark git vim expect -y
 
 ## Set SElinux disabled permanently for development. 
 read -p 'Do you want to SElinux to be permissive permanently?(y/n)' YESNO
