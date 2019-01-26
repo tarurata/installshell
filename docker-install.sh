@@ -25,4 +25,4 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 
 # Run Docker background
-sudo dockerd
+sudo dockerd &
