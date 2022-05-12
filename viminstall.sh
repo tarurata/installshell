@@ -8,8 +8,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     
 # Linux
-## wget https://raw.githubusercontent.com/tarurata/config/master/.vimrc-linux -P "${HOME}/.vimrc"
+## wget https://raw.githubusercontent.com/tarurata/config/master/.vimrc-linux -P "${HOME}" -O ".vimrc"
 # Mac
-## wget https://raw.githubusercontent.com/tarurata/config/master/.vimrc-forMac -P "${HOME}/.vimrc"
+## wget https://raw.githubusercontent.com/tarurata/config/master/.vimrc-forMac -P "${HOME}" -O ".vimrc"
 
 vim +PlugInstall
