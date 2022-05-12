@@ -3,8 +3,13 @@
 
 sudo yum install -y vim git wget
   
-git clone https://github.com/VundleVim/Vundle.vim.git "${HOME}/.vim/bundle/Vundle.vim"
+# Get neccessary files and dirs for plugin.
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     
-wget https://raw.githubusercontent.com/tarurata/vimrc/master/.vimrc -P "${HOME}"
+# Linux
+## wget https://raw.githubusercontent.com/tarurata/config/master/.vimrc-linux -P "${HOME}/.vimrc"
+# Mac
+## wget https://raw.githubusercontent.com/tarurata/config/master/.vimrc-forMac -P "${HOME}/.vimrc"
 
-vim +PluginInstall +qall
+vim +PlugInstall
