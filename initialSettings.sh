@@ -18,6 +18,11 @@ elif [ "$(uname)" = "Darwin" ]; then
 fi
 wget https://raw.githubusercontent.com/tarurata/config/master/.tmux.conf -P "${HOME}"
 
+# Change capsLock ctrl.
+if [ -e /etc/default/keyboard ]; then
+
+fi
+
 # Install vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
