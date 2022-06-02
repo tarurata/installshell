@@ -3,7 +3,8 @@
 set -eu
 
 if [ "$(uname)" = "Linux" ]; then
-  sudo apt-get install -y vim git wget curl tmux
+  # xsel is needed for tmux copy paste.
+  sudo apt-get install -y vim git wget curl tmux ibus-mozc xsel
 elif [ "$(uname)" = "Darwin" ]; then
   sudo brew install -y vim git wget curl tmux
 fi
