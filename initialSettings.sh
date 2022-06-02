@@ -23,7 +23,7 @@ wget https://raw.githubusercontent.com/tarurata/config/master/.tmux.conf -P "${H
 
 # Change capsLock ctrl.
 if [ -e /etc/default/keyboard ]; then
-
+  echo 'XKBOPTIONS="ctrl:nocaps"' | sudo tee -a /etc/default/keyboard
 fi
 
 # Install vim
