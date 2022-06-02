@@ -11,6 +11,9 @@ if [ "$(uname)" = "Linux" ]; then
   sudo apt-get install -y vim git wget curl tmux xsel ibus-mozc xclip vim-gtk3
   wget https://raw.githubusercontent.com/tarurata/config/master/.bashrc-linux -P "${HOME}" -O ".bashrc"
   wget https://raw.githubusercontent.com/tarurata/config/master/.vimrc-linux -P "${HOME}" -O ".vimrc"
+  # Install google-chorme
+  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  sudo apt install ./google-chrome-stable_current_amd64.deb
 elif [ "$(uname)" = "Darwin" ]; then
   sudo brew install -y vim git wget curl tmux xsel
   wget https://raw.githubusercontent.com/tarurata/config/master/.bashrc-forMac -P "${HOME}" -O ".bashrc"
