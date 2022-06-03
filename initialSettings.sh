@@ -13,7 +13,7 @@ if [ "$(uname)" = "Linux" ]; then
   wget https://raw.githubusercontent.com/tarurata/config/master/.vimrc-linux -P "${HOME}" -O ".vimrc"
   # Install google-chorme
   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  sudo apt install ./google-chrome-stable_current_amd64.deb
+  sudo apt -y install ./google-chrome-stable_current_amd64.deb
 elif [ "$(uname)" = "Darwin" ]; then
   sudo brew install -y vim git wget curl tmux xsel
   wget https://raw.githubusercontent.com/tarurata/config/master/.bashrc-forMac -P "${HOME}" -O ".bashrc"
@@ -30,3 +30,6 @@ fi
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim -c PlugInstall -c q -c q
+
+# Change login shell
+sudo chsh -s $(which bash)
